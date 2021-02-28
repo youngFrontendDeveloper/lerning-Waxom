@@ -1,20 +1,8 @@
-//Кнопка поиска
-
-// updated
-const input = document.querySelector(".search-form__input");
-const searchBtn = document.querySelector(".search-form__btn");
-
-const expand = () => {
-  searchBtn.classList.toggle("close");
-  input.classList.toggle("square");
-};
-
-searchBtn.addEventListener("click", expand);
 
 // ++++++++++ Фильтр для элементов  mixitup  +++++++++++
 
-var containerEl = document.querySelector('.container');
-var mixer = mixitup(containerEl);
+// var containerEl = document.querySelector('.container');
+// var mixer = mixitup(containerEl);
 
 
 // Изменение цвета фона активной кнопки
@@ -27,61 +15,29 @@ $('.button').click(function() {
 
 // Карусель
 
-// const swiper = new Swiper('.swiper-container', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
+const slider = document.querySelector('.swiper-container');
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
-
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  autoplay: {
-    delay: 3000,
-  },
-  slideToClickedSlide: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  // breakpoints: {
-  //   540: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  //   1200: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 10,
-  //   }
-  // }
+let mySwiper = new Swiper(slider, {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+  autoplay: false,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
 });
+
 
 // Добавление класса для изменения порядка элементов
 
-$(document).ready(function(){
-  $('.blog__item:odd').addClass('reverse');
-});
+// $(document).ready(function(){
+//   $('.blog__item:odd').addClass('reverse');
+// });
 
 
 // Плавный переход для меню
