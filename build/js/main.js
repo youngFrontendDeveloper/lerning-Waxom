@@ -1,15 +1,15 @@
 
 // ++++++++++ Фильтр для элементов  mixitup  +++++++++++
 
-// var containerEl = document.querySelector('.container');
-// var mixer = mixitup(containerEl);
+var containerEl = document.querySelector('.portfolio__galery-wrapper');
+var mixer = mixitup(containerEl);
 
 
 // Изменение цвета фона активной кнопки
 
-$('.button').click(function() {
-  $('.button').removeClass('button--active');
-  $(this).addClass('button--active');
+$('.portfolio__btn').click(function() {
+  $('.portfolio__btn').removeClass('portfolio__btn--active');
+  $(this).addClass('portfolio__btn--active');
 });
 
 
@@ -19,7 +19,7 @@ const slider = document.querySelector('.swiper-container');
 
 let mySwiper = new Swiper(slider, {
 	slidesPerView: 1,
-	spaceBetween: 0,
+	// spaceBetween: 0,
 	loop: true,
   autoplay: false,
 	pagination: {
@@ -72,12 +72,12 @@ $('.to-top').on('click', function() {
 $(document).ready(function(){
   if (document.documentElement.clientWidth < 768) {
     $('.menu').css({"display": "none"});
-    $('.fa-bars').css({"display": "block"});
+    $('.mobile-menu').css({"display": "block"});
 
-    $('.button-menu').click(function() {
+    $('.mobile-menu').click(function() {
       $('.menu').slideToggle(500);
-      $('.fa-bars').toggle();
-      $('.fa-times').toggle();
+      // $('.fa-bars').toggle();
+      // $('.fa-times').toggle();
     });
   }
 });

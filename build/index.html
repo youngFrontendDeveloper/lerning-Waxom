@@ -110,8 +110,8 @@
 
       </div>
       <!-- <div class="slider-buttons"> -->
-      <button class="btn swiper-button-prev">Предыдущий</button>
-      <button class="btn swiper-button-next">Следующий</button>
+      <button class="btn swiper-button-prev" title="Предыдущий">Prev</button>
+      <button class="btn swiper-button-next" title="Следующий">Next</button>
       <!-- </div> -->
       <div class="swiper-pagination"></div>
     </div><!-- end swiper-container-->
@@ -186,11 +186,112 @@
 
       </div>
     </section>
+
+    <!-- +++++++++++ Purchase +++++++++++ -->
+    <section class="purchase">
+      <div class="container d-fl-ar">
+        <p class="purchase__text"><a href="#" class="purchase__link">Waxom</a> Multipurpose WordPress Theme
+          <span class="purchase__span">Don't Forget to Rate the Template. Thanks so much!</span>
+        </p>
+        <a href="#" class="btn btn--brown">Purchase Now</a>
+      </div>
+    </section>
+
+    <!-- ++++++++++++++ Portfolio +++++++++++++++ -->
+    <section class="portfolio" id="portfolio">
+      <div class="container d-fl-ar">
+        <h2 class="title">Our Latest Projects.</h2>
+        <p class="subtitle portfolio__subtitle">
+          Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
+          dynamicus, qui sequitur mutationem consuetudium.
+        </p>
+
+        <div class="portfolio__galery-wrapper d-fl-ar">
+          <div class="portfolio__galery-btns d-fl-ar">
+            <button class="btn portfolio__btn portfolio__btn--active" data-filter="all">All</button>
+            <button class="btn portfolio__btn" data-filter=".wd">Web Design</button>
+            <button class="btn portfolio__btn" data-filter=".ma">Mobile App</button>
+            <button class="btn portfolio__btn" data-filter=".il">Illustration</button>
+            <button class="btn portfolio__btn" data-filter=".ph">Photography</button>
+          </div><!-- end portfolio__galery-buttons -->
+
+          <div class="portfolio__galery d-fl-c">
+            <figure class="portfolio__card card mix wd">
+              <div class="card__img-block">
+                <img class="card__img" src="img/galery-1.jpg" srcset="img/galery-1.webp 1x, img/galery-1@2x.webp 2x"
+                  alt="Портфолио" width="370" height="237">
+              </div>
+              <figcaption class="card__title">
+                Claritas Etiam Processus
+                <span class="card__text">Photography, Nature</span>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__card card mix ma">
+              <div class="card__img-block">
+                <img class="card__img" src="img/galery-2.jpg" srcset="img/galery-2.webp 1x, img/galery-2@2x.webp 2x"
+                  alt="Портфолио" width="370" height="237">
+              </div>
+              <figcaption class="card__title">
+                Claritas Etiam Processus
+                <span class="card__text">Photography, Nature</span>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__card card mix il ph">
+              <div class="card__img-block">
+                <img class="card__img" src="img/galery-3.jpg" srcset="img/galery-3.webp 1x, img/galery-3@2x.webp 2x"
+                  alt="Портфолио" width="370" height="237">
+              </div>
+              <figcaption class="card__title">
+                Claritas Etiam Processus
+                <span class="card__text">Photography, Nature</span>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__card card mix wd">
+              <div class="card__img-block">
+                <img class="card__img" src="img/galery-4.jpg" srcset="img/galery-4.webp 1x, img/galery-4@2x.webp 2x"
+                  alt="Портфолио" width="370" height="237">
+              </div>
+              <figcaption class="card__title">
+                Claritas Etiam Processus
+                <span class="card__text">Photography, Nature</span>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__card card mix ma il ">
+              <div class="card__img-block">
+                <img class="card__img" src="img/galery-5.jpg" srcset="img/galery-5.webp 1x, img/galery-5@2x.webp 2x"
+                  alt="Портфолио" width="370" height="237">
+              </div>
+              <figcaption class="card__title">
+                Claritas Etiam Processus
+                <span class="card__text">Photography, Nature</span>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__card card mix wd ph">
+              <div class="card__img-block">
+                <img class="card__img" src="img/galery-6.jpg" srcset="img/galery-6.webp 1x, img/galery-6@2x.webp 2x"
+                  alt="Портфолио" width="370" height="237">
+              </div>
+              <figcaption class="card__title">
+                Claritas Etiam Processus
+                <span class="card__text">Photography, Nature</span>
+              </figcaption>
+            </figure>
+          </div><!-- end portfolio__galery -->
+          <button class="btn btn--brown" data-filter="all">LOAD MORE</button>
+        </div><!-- end portfolio__galery-wrapper -->
+      </div><!-- end container -->
+    </section>
+
   </main>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Подключаем jQuery с CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+    integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+    crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
 
