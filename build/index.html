@@ -57,8 +57,8 @@
       </nav>
     </div>
 
-    <!-- ++++++++++++ Слайдер swiper +++++++++++++ -->
-    <div class="swiper-container">
+    <!-- ++++++++++++ Slider-header +++++++++++++ -->
+    <div class="slider-header">
       <div class="swiper-wrapper">
         <div class="swiper-slide slide">
           <picture class="slide__img">
@@ -285,24 +285,194 @@
     <!-- ++++++++++++ Video ++++++++++++ -->
     <section class="video__wrapper">
       <video class="video" controls muted width="1920" height="705" poster="img/bg_video.jpg">
-
         <source src="video/Lake.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-
         Video tag not supported. Download the video <a href="video/Lake.mp4">here</a>.
       </video>
-      <div class="container video__container d-fl-col">
-        <h2 class="title title--white">Waxom Video Presentation</h2>
-        <p class="subtitle subtitle--white">Investigationes demonstraverunt lectores legere me lius quod ii legunt
-          saepius, qui sequitur
-          mutationem consuetudium.</p>
+      <div class="container video__text-block d-fl-col">
         <button class="btn video__btn">Play
           <svg class="video__icon-play" width="70" height="70">
             <use xlink:href="img/sprite.svg#icon_play"></use>
           </svg>
         </button>
+        <h2 class="title title--white video__title">Waxom Video Presentation</h2>
+        <p class="subtitle subtitle--white video__subtitle">Investigationes demonstraverunt lectores legere me lius quod
+          ii legunt
+          saepius, qui sequitur
+          mutationem consuetudium.</p>
+      </div><!-- end video__text-block -->
       </div>
-      </div>
+    </section>
 
+    <!-- +++++++++++++ Mobile-device ++++++++++++ -->
+    <section class="mobile-device">
+      <div class="container mobile-device__container ">
+        <div class="mobile-device__text-box d-fl-col">
+          <h2 class="title mobile-device__title">Excellent for Mobile Devices.</h2>
+          <p class="subtitle mobile-device__subtitle">
+            Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+            commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas.
+            Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+          </p>
+          <ul class="mobile-device__items">
+            <li class="mobile-device__item">Nam liber tempor cum soluta nobis eleifend option;</li>
+            <li class="mobile-device__item">Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
+            <li class="mobile-device__item">Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
+            <li class="mobile-device__item">Investigationes demonstraverunt lectores</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- +++++++++++ Counters +++++++++++ -->
+    <section class="counters">
+      <div class="container d-fl-c">
+        <ul class="counters__items d-fl-c">
+          <li class="counters__item d-fl-col">
+            <img class="counters__img" src="img/icon-clients.svg" alt="Иконка" width="44" height="44">
+            <span class="counters__number">3587</span>
+            <span class="counters__caption">Satisfied Clients</span>
+          </li>
+          <li class="counters__item d-fl-col">
+            <img class="counters__img" src="img/icon-cups.svg" alt="Иконка" width="48" height="44">
+            <span class="counters__number">207</span>
+            <span class="counters__caption">Cups of coffee</span>
+          </li>
+          <li class="counters__item d-fl-col">
+            <img class="counters__img" src="img/icon-blog.svg" alt="Иконка" width="44" height="44">
+            <span class="counters__number">2500</span>
+            <span class="counters__caption">Blog posts</span>
+          </li>
+          <li class="counters__item d-fl-col">
+            <img class="counters__img" src="img/icon-likes.svg" alt="Иконка" width="44" height="44">
+            <span class="counters__number">873</span>
+            <span class="counters__caption">Likes</span>
+          </li>
+          <li class="counters__item d-fl-col">
+            <img class="counters__img" src="img/icon-launch.svg" alt="Иконка" width="54" height="44">
+            <span class="counters__number">900</span>
+            <span class="counters__caption">We launched</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ++++++++++++++++ Recent Posts +++++++++++++ -->
+    <section class="posts">
+      <div class="container posts__container d-fl-ar">
+        <h2 class="title posts__title">Recent Posts</h2>
+        <p class="subtitle posts__subtitle">Investigationes demonstraverunt lectores legere me lius quod ii legunt
+          saepius. Claritas est
+          etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+        <div class="slider-posts swiper-container">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide-post">
+              <picture class="slide-post__img">
+                <source type="image/webp" srcset="img/post-1.webp 1x, img/post-1@2x.webp  2x">
+                <img src="img/post-1.jpg" alt="Изображение поста" width="370" height="219">
+              </picture>
+              <div class="slide-post__text-box">
+                <h3 class="slide-post__title">Lorem ipsum dolor sit amet</h3>
+                <p class="slide-post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  consuetudium.</p>
+                <a href="" class="slide-post__link">Read More</a>
+                <div class="slide-post__date">
+                  <span class="slide-post__number">30</span>
+                  <span class="slide-post__month">Sep.</span>
+                </div>
+              </div>
+            </div><!-- end slide-post -->
+
+            <div class="swiper-slide slide-post">
+              <picture class="slide-post__img">
+                <source type="image/webp" srcset="img/post-2.webp 2x, img/post-2@2x.webp  2x">
+                <img src="img/post-2.jpg" alt="Изображение поста" width="370" height="219">
+              </picture>
+              <div class="slide-post__text-box">
+                <h3 class="slide-post__title">Lorem ipsum dolor sit amet</h3>
+                <p class="slide-post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  consuetudium.</p>
+                <a href="" class="slide-post__link">Read More</a>
+                <div class="slide-post__date">
+                  <span class="slide-post__number">01</span>
+                  <span class="slide-post__month">Okt.</span>
+                </div>
+              </div>
+            </div><!-- end slide-post -->
+
+            <div class="swiper-slide slide-post">
+              <picture class="slide-post__img">
+                <source type="image/webp" srcset="img/post-3.webp 1x, img/post-3@2x.webp  2x">
+                <img src="img/post-3.jpg" alt="Изображение поста" width="370" height="219">
+              </picture>
+              <div class="slide-post__text-box">
+                <h3 class="slide-post__title">Lorem ipsum dolor sit amet</h3>
+                <p class="slide-post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  consuetudium.</p>
+                <a href="" class="slide-post__link">Read More</a>
+                <div class="slide-post__date">
+                  <span class="slide-post__number">02</span>
+                  <span class="slide-post__month">Okt.</span>
+                </div>
+              </div>
+            </div><!-- end slide-post -->
+
+            <div class="swiper-slide slide-post">
+              <picture class="slide-post__img">
+                <source type="image/webp" srcset="img/post-4.webp 1x, img/post-4@2x.webp  2x">
+                <img src="img/post-4.jpg" alt="Изображение поста" width="370" height="219">
+              </picture>
+              <div class="slide-post__text-box">
+                <h3 class="slide-post__title">Lorem ipsum dolor sit amet</h3>
+                <p class="slide-post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  consuetudium.</p>
+                <a href="" class="slide-post__link">Read More</a>
+                <div class="slide-post__date">
+                  <span class="slide-post__number">04</span>
+                  <span class="slide-post__month">Okt.</span>
+                </div>
+              </div>
+            </div><!-- end slide-post -->
+
+            <div class="swiper-slide slide-post">
+              <picture class="slide-post__img">
+                <source type="image/webp" srcset="img/post-5.webp 1x, img/post-5@2x.webp  2x">
+                <img src="img/post-5.jpg" alt="Изображение поста" width="370" height="219">
+              </picture>
+              <div class="slide-post__text-box">
+                <h3 class="slide-post__title">Lorem ipsum dolor sit amet</h3>
+                <p class="slide-post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  consuetudium.</p>
+                <a href="" class="slide-post__link">Read More</a>
+                <div class="slide-post__date">
+                  <span class="slide-post__number">06</span>
+                  <span class="slide-post__month">Okt.</span>
+                </div>
+              </div>
+            </div><!-- end slide-post -->
+
+            <div class="swiper-slide slide-post">
+              <picture class="slide-post__img">
+                <source type="image/webp" srcset="img/post-6.webp 1x, img/post-6@2x.webp  2x">
+                <img src="img/post-6.jpg" alt="Изображение поста" width="370" height="219">
+              </picture>
+              <div class="slide-post__text-box">
+                <h3 class="slide-post__title">Lorem ipsum dolor sit amet</h3>
+                <p class="slide-post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  consuetudium.</p>
+                <a href="" class="slide-post__link">Read More</a>
+                <div class="slide-post__date">
+                  <span class="slide-post__number">06</span>
+                  <span class="slide-post__month">Okt.</span>
+                </div>
+              </div>
+            </div><!-- end slide-post -->
+
+
+          </div><!-- end swiper-wrapper -->
+        </div><!-- end slider-posts -->
+
+      </div><!-- end posts__container -->
     </section>
 
   </main>

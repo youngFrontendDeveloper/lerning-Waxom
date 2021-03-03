@@ -15,13 +15,14 @@ $('.portfolio__btn').click(function() {
 
 // Карусель
 
-const slider = document.querySelector('.swiper-container');
+// Slider-header
+const slider = document.querySelector('.slider-header');
 
 let mySwiper = new Swiper(slider, {
 	slidesPerView: 1,
 	// spaceBetween: 0,
 	loop: true,
-  autoplay: false,
+  autoplay: true,
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
@@ -32,6 +33,35 @@ let mySwiper = new Swiper(slider, {
 	},
 });
 
+// Slider-posts
+const slider2 = document.querySelector('.slider-posts');  
+const pageWidth = document.documentElement.clientWidth;
+const sliderWidth = document.querySelector('.swiper-container').offsetWidth; 
+const slideWidth = document.querySelector('.slide-post').offsetWidth; 
+
+let mySwiper2 = new Swiper(slider2, {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+    autoplay: {
+    delay: 3000,
+  },
+  slideToClickedSlide: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: (sliderWidth - slideWidth*2) ,
+    },
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: (sliderWidth - slideWidth*3) / 2,
+    }
+  }
+});
 
 // Добавление класса для изменения порядка элементов
 
@@ -75,9 +105,7 @@ $(document).ready(function(){
     $('.mobile-menu').css({"display": "block"});
 
     $('.mobile-menu').click(function() {
-      $('.menu').slideToggle(500);
-      // $('.fa-bars').toggle();
-      // $('.fa-times').toggle();
+      $('.menu').slideToggle(500);      
     });
   }
 });
