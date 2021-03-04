@@ -19,8 +19,7 @@ $('.portfolio__btn').click(function() {
 const slider = document.querySelector('.slider-header');
 
 let mySwiper = new Swiper(slider, {
-	slidesPerView: 1,
-	// spaceBetween: 0,
+	slidesPerView: 1,	
 	loop: true,
   autoplay: true,
 	pagination: {
@@ -63,12 +62,6 @@ let mySwiper2 = new Swiper(slider2, {
   }
 });
 
-// Добавление класса для изменения порядка элементов
-
-// $(document).ready(function(){
-//   $('.blog__item:odd').addClass('reverse');
-// });
-
 
 // Плавный переход для меню
 $(function(){
@@ -109,3 +102,31 @@ $(document).ready(function(){
     });
   }
 });
+
+
+// Включение-отключение  видео-плеера
+
+var replay = document.querySelector('.video__btn');
+var video = document.querySelector('.video');
+var videoControls = document.querySelector('.video__text-block'); 
+var poster = document.querySelector('video[poster]');
+
+function disableControls() {
+  video.controls = false;  // Отключаем стандартную паннель  
+}
+
+disableControls();
+
+function play() {  
+  if(video.paused) {
+      video.play();     
+      videoControls.style.display = "none";     
+      
+  } else {
+      video.pause();       
+      videoControls.style.display = "flex";    
+  }
+}
+
+replay.addEventListener('click', play);
+video.addEventListener('click', play);
