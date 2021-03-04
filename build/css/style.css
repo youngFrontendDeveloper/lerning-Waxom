@@ -1614,13 +1614,12 @@ svg {
 }
 @media (min-width: 768px) {
   .footer-top__item:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 48px;
   }
 }
 @media (min-width: 1280px) {
   .footer-top__item:not(:last-child) {
     margin-bottom: 0;
-    margin-right: 48px;
   }
 }
 .footer__title {
