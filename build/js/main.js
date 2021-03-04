@@ -41,15 +41,15 @@ const slideWidth = document.querySelector('.slide-post').offsetWidth;
 
 let mySwiper2 = new Swiper(slider2, {
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 20,
   loop: true,
     autoplay: {
     delay: 3000,
   },
   slideToClickedSlide: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.sw-button-next',
+    prevEl: '.sw-button-prev',
   },
   breakpoints: {
     768: {
