@@ -202,11 +202,10 @@ svg {
   height: 25px;
   z-index: 10;
   opacity: 0.6;
-  transform: rotate(-90deg);
   transition: transform 0.3s ease;
 }
 .to-top:hover {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .to-top__icon {
   width: 100%;
