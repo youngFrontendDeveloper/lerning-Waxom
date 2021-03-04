@@ -5,21 +5,23 @@ var path = {
     build: {
         html: 'build/',
         js: 'build/js/',
+        lib: 'build/js/lib/',
         css: 'build/css/',
         img: 'build/img/',
         fonts: 'build/fonts/',
-        lib: 'build/js/lib/',
+        video: 'build/video/'
         // favicon: 'build/favicon/'
     },
     src: {
         html: 'src/*.html',
-        js: 'src/js/main.js',       
+        js: 'src/js/main.js',  
+        lib: 'src/js/lib/**/*.js',     
         style: 'src/style/style.less',
         img: 'src/img/**/*.*',
         webp: 'src/img/**/*.{png,jpg}',
         fonts: 'src/fonts/**/*.*',
         sprite: 'src/img/**/*.svg',
-        lib: 'src/js/lib/**/*.js',
+        video: 'src/video/*.*'
         // favicon: 'src/favicon.ico'
     },
     watch: {
@@ -29,7 +31,8 @@ var path = {
         img: 'src/img/**/*.*',
         webp: 'src/img/**/*.{png,jpg}',
         fonts: 'srs/fonts/**/*.*',
-        sprite: 'src/img/**/*.svg'
+        sprite: 'src/img/**/*.svg',
+        video: 'src/video/*.*'
     },
     clean: './build/*'
 };
@@ -132,7 +135,8 @@ gulp.task('sprite:build', function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest(path.build.img));
+    .pipe(gulp.dest(path.build.img))
+    .pipe(webserver.reload({ stream: true })); // перезагрузим сервер
 });
 
 gulp.task('image:build', function () {
@@ -146,7 +150,8 @@ gulp.task('image:build', function () {
       }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest(path.build.img));
+    .pipe(gulp.dest(path.build.img))
+    .pipe(webserver.reload({ stream: true })); // перезагрузим сервер
 });
 
 gulp.task('webp:build', function () {
@@ -155,6 +160,14 @@ gulp.task('webp:build', function () {
       quality: 90
     }))
     .pipe(gulp.dest(path.build.img));
+});
+
+// обработка видео
+gulp.task("video:build", function () {
+    return gulp.src(path.src.video)
+        .pipe(gulp.dest(path.build.video))
+        // .pipe(reload({stream:true}))
+        .pipe(webserver.reload({ stream: true })); // перезагрузим сервер
 });
 
 // удаление каталога build
@@ -179,7 +192,8 @@ gulp.task('build',
             // 'favicon:build',
             'image:build',
             'sprite:build',
-            'webp:build'
+            'webp:build',
+            'video:build'
         )
     )
 );
@@ -193,6 +207,7 @@ gulp.task('watch', function () {
     gulp.watch(path.watch.img, gulp.series('image:build'));
     gulp.watch(path.watch.webp, gulp.series('webp:build'));
     gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
+    gulp.watch(path.watch.video, gulp.series('video:build'));
 });
 
 // задача по умолчанию

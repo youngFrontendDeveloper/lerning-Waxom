@@ -1,86 +1,65 @@
-//Кнопка поиска
-
-// updated
-const input = document.querySelector(".search-form__input");
-const searchBtn = document.querySelector(".search-form__btn");
-
-const expand = () => {
-  searchBtn.classList.toggle("close");
-  input.classList.toggle("square");
-};
-
-searchBtn.addEventListener("click", expand);
 
 // ++++++++++ Фильтр для элементов  mixitup  +++++++++++
 
-var containerEl = document.querySelector('.container');
+var containerEl = document.querySelector('.portfolio__galery-wrapper');
 var mixer = mixitup(containerEl);
 
 
 // Изменение цвета фона активной кнопки
 
-$('.button').click(function() {
-  $('.button').removeClass('button--active');
-  $(this).addClass('button--active');
+$('.portfolio__btn').click(function() {
+  $('.portfolio__btn').removeClass('portfolio__btn--active');
+  $(this).addClass('portfolio__btn--active');
 });
 
 
 // Карусель
 
-// const swiper = new Swiper('.swiper-container', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
+// Slider-header
+const slider = document.querySelector('.slider-header');
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
+let mySwiper = new Swiper(slider, {
+	slidesPerView: 1,	
+	loop: true,
+  autoplay: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+});
 
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
+// Slider-posts
+const slider2 = document.querySelector('.slider-posts');  
+const pageWidth = document.documentElement.clientWidth;
+const sliderWidth = document.querySelector('.swiper-container').offsetWidth; 
+const slideWidth = document.querySelector('.slide-post').offsetWidth; 
 
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
-
-const swiper = new Swiper('.swiper-container', {
+let mySwiper2 = new Swiper(slider2, {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 20,
   loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  autoplay: {
+    autoplay: {
     delay: 3000,
   },
   slideToClickedSlide: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.sw-button-next',
+    prevEl: '.sw-button-prev',
   },
-  // breakpoints: {
-  //   540: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  //   1200: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 10,
-  //   }
-  // }
-});
-
-// Добавление класса для изменения порядка элементов
-
-$(document).ready(function(){
-  $('.blog__item:odd').addClass('reverse');
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: (sliderWidth - slideWidth*2) ,
+    },
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: (sliderWidth - slideWidth*3) / 2,
+    }
+  }
 });
 
 
@@ -116,12 +95,38 @@ $('.to-top').on('click', function() {
 $(document).ready(function(){
   if (document.documentElement.clientWidth < 768) {
     $('.menu').css({"display": "none"});
-    $('.fa-bars').css({"display": "block"});
+    $('.mobile-menu').css({"display": "block"});
 
-    $('.button-menu').click(function() {
-      $('.menu').slideToggle(500);
-      $('.fa-bars').toggle();
-      $('.fa-times').toggle();
+    $('.mobile-menu').click(function() {
+      $('.menu').slideToggle(500);      
     });
   }
 });
+
+
+// Включение-отключение  видео-плеера
+
+var replay = document.querySelector('.video__btn');
+var video = document.querySelector('.video');
+var videoControls = document.querySelector('.video__text-block'); 
+var poster = document.querySelector('video[poster]');
+
+function disableControls() {
+  video.controls = false;  // Отключаем стандартную паннель  
+}
+
+disableControls();
+
+function play() {  
+  if(video.paused) {
+      video.play();     
+      videoControls.style.display = "none";     
+      
+  } else {
+      video.pause();       
+      videoControls.style.display = "flex";    
+  }
+}
+
+replay.addEventListener('click', play);
+video.addEventListener('click', play);
