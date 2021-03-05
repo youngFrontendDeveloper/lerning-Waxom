@@ -1,0 +1,46 @@
+.menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  padding: 15px 30px;
+  background-color: rgba(53, 51, 50, 0.9);
+  border: 1px solid @color-white;
+  border-radius: 3px;
+
+  @media screen and (min-width: @width-tablet) {
+    position: static;
+    display: flex;
+    width: 480px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+  }
+
+  @media screen and (min-width: @width-desktop) {
+    display: flex;
+    width: 615px;
+  }
+
+  &__item:not(:last-child) {
+    padding-bottom: 10px;
+
+    @media screen and (min-width: @width-tablet) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-family: "montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    color: @color-white;
+
+    &:hover {
+      color: @color-light-brown;
+    }
+  }
+}

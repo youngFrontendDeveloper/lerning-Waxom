@@ -33,7 +33,7 @@
           <li class="menu__item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
           <li class="menu__item"><a href="#features" class="menu__link">Features</a></li>
           <li class="menu__item"><a href="#blog" class="menu__link">Blog</a></li>
-          <li class="menu__item"><a href="#pricing" class="menu__link">Pricing</a></li>
+          <li class="menu__item"><a href="#partners" class="menu__link">Partners</a></li>
           <li class="menu__item"><a href="#shortcodes" class="menu__link">Shortcodes</a></li>
           <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
         </ul>
@@ -44,10 +44,10 @@
         </button>
         <form action="#" class="search-form nav__search-form">
           <input type="search" class="search-form__input" placeholder="Поиск" name="search-form__input">
-          <svg class="icon-search" width="24" height="24" title="Искать">
+          <svg class="icon-search" width="24" height="24">
             <use xlink:href="img/sprite.svg#icon-search"></use>
           </svg>
-          <!-- <i class="icon-search" title="Искать"></i> -->
+          <!-- <i class="icon-search" ></i> -->
         </form>
         <button class="btn mobile-menu">Меню
           <svg class="mobile-menu__icon" width="24" height="24">
@@ -69,7 +69,7 @@
           </picture>
           <div class="slide__text-box">
             <span class="slide__subtitle">Unique and Modern Design</span>
-            <h1 class="slide__title">Portfolio PSD Template</h1>
+            <h2 class="slide__title">Portfolio PSD Template</h2>
             <p class="slide__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
               quod mazim placerat facer possim assum.</p>
             <a href="#" class="btn btn--brown slide__btn">Get started</a>
@@ -85,7 +85,7 @@
           </picture>
           <div class="slide__text-box">
             <span class="slide__subtitle">Unique and Modern Design</span>
-            <h1 class="slide__title">Portfolio PSD Template</h1>
+            <h2 class="slide__title">Portfolio PSD Template</h2>
             <p class="slide__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
               quod mazim placerat facer possim assum.</p>
             <a href="#" class="btn btn--brown slide__btn">Get started</a>
@@ -101,7 +101,7 @@
           </picture>
           <div class="slide__text-box">
             <span class="slide__subtitle">Unique and Modern Design</span>
-            <h1 class="slide__title">Portfolio PSD Template</h1>
+            <h2 class="slide__title">Portfolio PSD Template</h2>
             <p class="slide__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
               quod mazim placerat facer possim assum.</p>
             <a href="#" class="btn btn--brown slide__btn">Get started</a>
@@ -119,8 +119,10 @@
 
   <!-- ++++++++++ Main ++++++++++++++ -->
   <main class="main">
+    <h1 class="visualy-hidden">Сайт компании Waxom</h1>
     <!-- ++++++++++++++ Services ++++++++++++++ -->
     <section class="services" id="about">
+      <h2 class="visualy-hidden">About us</h2>
       <div class="container services__container d-fl-ar">
         <figure class="services__item">
           <svg class="services__img" width="47" height="47">
@@ -284,6 +286,7 @@
 
     <!-- ++++++++++++ Video ++++++++++++ -->
     <section class="video__wrapper">
+      <h2 class="visualy-hidden">Our video</h2>
       <video class="video" controls muted width="1920" height="705" poster="img/bg_video.jpg">
         <source src="video/Lake.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         Video tag not supported. Download the video <a href="video/Lake.mp4">here</a>.
@@ -303,7 +306,7 @@
     </section>
 
     <!-- +++++++++++++ Mobile-device ++++++++++++ -->
-    <section class="mobile-device">
+    <section class="mobile-device" id="features">
       <div class="container mobile-device__container ">
         <div class="mobile-device__text-box d-fl-col">
           <h2 class="title mobile-device__title">Excellent for Mobile Devices.</h2>
@@ -324,6 +327,7 @@
 
     <!-- +++++++++++ Counters +++++++++++ -->
     <section class="counters">
+      <h2 class="visualy-hidden">Counters</h2>
       <div class="container d-fl-c">
         <ul class="counters__items d-fl-c">
           <li class="counters__item d-fl-col">
@@ -356,7 +360,7 @@
     </section>
 
     <!-- ++++++++++++++++ Recent Posts +++++++++++++ -->
-    <section class="posts">
+    <section class="posts" id="blog">
       <div class="container posts__container d-fl-ar">
         <h2 class="title posts__title">Recent Posts</h2>
         <p class="subtitle posts__subtitle">Investigationes demonstraverunt lectores legere me lius quod ii legunt
@@ -386,7 +390,7 @@
 
             <div class="swiper-slide slide-post">
               <picture class="slide-post__img">
-                <source type="image/webp" srcset="img/post-2.webp 2x, img/post-2@2x.webp  2x">
+                <source type="image/webp" srcset="img/post-2.webp 1x, img/post-2@2x.webp  2x">
                 <img src="img/post-2.jpg" alt="Изображение поста" width="370" height="219">
               </picture>
               <div class="slide-post__text-box">
@@ -488,12 +492,13 @@
     </section>
 
     <!-- +++++++++++++++ Partners ++++++++++ -->
-    <section class="partners">
+    <section class="partners" id="partners">
+      <h2 class="visualy-hidden">Our partners</h2>
       <div class="container d-fl-c">
         <div class="partners__item">
           <picture class="partners__img">
             <source type="image/webp" srcset="img/item1.webp 1x, img/item1@2x.webp  2x">
-            <source srcset="img/item1.png, img/item1@2x.png  2x">
+            <source type="image/png" srcset="img/item1.png 1x, img/item1@2x.png  2x">
             <img src="img/item1.png" srcset="img/item1.png 1x, img/item1@2x.png 2x" alt="Логотип партнера" width="210"
               height="127">
           </picture>
@@ -501,7 +506,7 @@
         <div class="partners__item">
           <picture class="partners__img">
             <source type="image/webp" srcset="img/item2.webp 1x, img/item2@2x.webp  2x">
-            <source srcset="img/item2.png, img/item2@2x.png  2x">
+            <source type="image/png" srcset="img/item2.png 1x, img/item2@2x.png  2x">
             <img src="img/item2.png" srcset="img/item2.png 1x, img/item2@2x.png 2x" alt="Логотип партнера" width="210"
               height="210">
           </picture>
@@ -509,7 +514,7 @@
         <div class="partners__item">
           <picture class="partners__img">
             <source type="image/webp" srcset="img/item3.webp 1x, img/item3@2x.webp  2x">
-            <source srcset="img/item3.png, img/item3@2x.png  2x">
+            <source type="image/png" srcset="img/item3.png 1x, img/item3@2x.png  2x">
             <img src="img/item3.png" srcset="img/item3.png 1x, img/item3@2x.png 2x" alt="Логотип партнера" width="210"
               height="130">
           </picture>
@@ -517,7 +522,7 @@
         <div class="partners__item">
           <picture class="partners__img partners__img-barber">
             <source type="image/webp" srcset="img/item4.webp 1x, img/item4@2x.webp  2x">
-            <source srcset="img/item4.png, img/item4@2x.png  2x">
+            <source type="image/png" srcset="img/item4.png 1x, img/item4@2x.png  2x">
             <img src="img/item4.png" srcset="img/item4.png 1x, img/item4@2x.png 2x" alt="Логотип партнера" width="210"
               height="164">
           </picture>
@@ -530,7 +535,7 @@
   <!-- +++++++++++++ Footer +++++++++++++ -->
   <footer class="footer">
     <div class="footer-top">
-      <div class="container d-fl-c">
+      <div class="container d-fl-c-s">
         <div class="footer-top__col d-fl-ar">
           <div class="footer-top__item footer-about">
             <a href="#" class="logo footer-about__logo">
@@ -569,13 +574,15 @@
           <div class="footer-top__item footer-twitter">
             <h3 class="footer__title">Our Twitter</h3>
             <p class="footer-twitter__text">
-              <a class="footer-twitter__link" href="#">@waxom</a> Cum soluta nobis eleifend option congue nihil
+              <a class="footer-twitter__link" href="#" target="_blank">@waxom</a> Cum soluta nobis eleifend option
+              congue nihil
               imperdiet
               doming
               <span class="footer-twitter__date">3 mins ago</span>
             </p>
             <p class="footer-twitter__text">
-              Mirum est <a class="footer-twitter__link" href="#">#envato</a> notare quam littera gothica, quam nunc
+              Mirum est <a class="footer-twitter__link" href="#" target="_blank">#envato</a> notare quam littera
+              gothica, quam nunc
               putamus parum anteposuerit litterarum
               <span class="footer-twitter__date">5 hours ago</span>
             </p>

@@ -1,0 +1,47 @@
+.logo {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+
+  @media screen and (min-width: @width-desktop) {
+    width: 200px;
+    height: 60px;
+  }
+
+  // .logo__img
+
+  &__img {
+    width: 36px;
+    height: 31px;
+    fill: @color-white;
+
+    @media screen and (min-width: @width-desktop) {
+      width: 63px;
+      height: 55px;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    height: 25px;
+    font-family: "Raleway", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: @color-white;
+
+    @media screen and (min-width: @width-desktop) {
+      height: 34px;
+      font-size: 34px;
+    }
+  }
+}
+
+.logo:hover>.logo__text {
+  color: @color-light-brown;
+}
+
+.logo:hover>.logo__img {
+  fill: @color-light-brown;
+}
