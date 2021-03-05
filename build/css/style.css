@@ -1229,7 +1229,7 @@ svg {
   width: 100%;
   padding-top: 90px;
   padding-bottom: 100px;
-  background: url(/img/iphone.png), rgba(255, 255, 255, 0.85);
+  background: url(../img/iphone.png), rgba(255, 255, 255, 0.85);
   background-repeat: no-repeat;
   background-size: 212px 308px;
   background-position: 30%, 30%;
