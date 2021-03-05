@@ -1,0 +1,156 @@
+.slider-header {
+  width: 100%;
+  height: 100%;
+  margin-top: -100px;
+  overflow: hidden;
+}
+
+.slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.slide__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.slide__text-box {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+
+  @media screen and (min-width: @width-tablet) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  @media screen and (min-width: @width-desktop) {
+    padding-top: 409px;
+    padding-bottom: 376px;
+  }
+}
+
+.slide__subtitle {
+  margin-bottom: 7px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+
+  @media screen and (min-width: @width-tablet) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: @width-desktop) {
+    font-size: 36px;
+  }
+}
+
+.slide__title {
+  margin-bottom: 7px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1;
+
+  @media screen and (min-width: @width-tablet) {
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: @width-desktop) {
+    font-size: 52px;
+  }
+}
+
+.slide__text {
+  width: 60%;
+  margin-bottom: 40px;
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: @color-white;
+
+  @media screen and (min-width: @width-desktop) {
+    width: 563px;
+  }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 55px;
+  height: 18px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: transparent;
+  border: 1px solid #D3C1AD;
+  transform: scale(1.5);
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+
+  @media screen and (min-width: @width-tablet) {
+    display: block;
+    width: 40px;
+    height: 73px;
+    color: @color-white  !important;
+    opacity: 0.5;
+    background-color: transparent;
+  }
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: @color-light-brown;
+  opacity: 1;
+}
+
+.swiper-button-prev {
+
+  @media screen and (min-width: @width-tablet) {
+    left: 50px;
+  }
+
+  @media(min-width: @width-desktop) {
+    left: 160px;
+  }
+}
+
+.swiper-button-next {
+
+  @media screen and (min-width: @width-tablet) {
+    right: 50px;
+  }
+
+  @media screen and (min-width: @width-desktop) {
+    right: 160px;
+  }
+}

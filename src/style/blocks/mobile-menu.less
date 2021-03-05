@@ -1,0 +1,19 @@
+.mobile-menu {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  &__icon {
+    fill: @color-white;
+  }
+
+
+
+  @media screen and (min-width: @width-tablet) {
+    display: none;
+  }
+}
+
+.mobile-menu:hover .mobile-menu__icon {
+  fill: @color-light-brown;
+}

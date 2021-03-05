@@ -1,0 +1,30 @@
+.nav {
+  position: relative;
+
+  @media screen and (min-width: @width-tablet) {
+    width: 580px;
+  }
+
+  @media screen and (min-width: @width-desktop) {
+    width: 740px;
+  }
+
+  &__btn-cart {
+    margin-right: 80px;
+
+    @media screen and (min-width: @width-tablet) {
+      margin-right: 60px;
+    }
+  }
+
+  &__search-form {
+    position: absolute;
+    top: -5px;
+    right: 40px;
+
+    @media screen and (min-width: @width-tablet) {
+      right: 0px;
+    }
+  }
+
+}
